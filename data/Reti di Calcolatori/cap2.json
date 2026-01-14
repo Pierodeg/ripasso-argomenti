@@ -1,0 +1,193 @@
+{
+  "chapterTitle": "Capitolo 2 – Modello ISO-OSI",
+  "topics": [
+    {
+      "title": "2.1 Cos’è il modello ISO – OSI",
+      "definition": "Il modello ISO–OSI (Open Systems Interconnection) descrive un progetto di rete suddiviso in livelli, dal più basso legato ai mezzi trasmissivi fino ai livelli più vicini all’utente e alle applicazioni, in una struttura a pila standardizzata (de iure).",
+      "explanation": "Nel modello OSI ogni livello lavora a un certo grado di astrazione, implementa funzioni specifiche e comunica con il livello omologo dell’altro host. Ogni host possiede l’intera pila. OSI è un modello didattico a 7 livelli, raggruppati in: (1) livelli bassi “Data flow” (funzioni infrastrutturali di rete) e (2) livelli alti “processo” (funzioni orientate all’utente). I livelli sono:\n- Fisico: trasmissione di bit sul canale (specifiche di segnale, interfacce, collegamento fisico; unico livello direttamente hardware).\n- Data Link: organizza i bit in frame e segnala gli errori; gestisce ack/ritrasmissione a livello di collegamento e accesso al mezzo condiviso.\n- Rete: rende i livelli superiori indipendenti dai mezzi fisici; fa routing e traduzione/gestione indirizzi tra reti diverse.\n- Trasporto: servizio end-to-end privo di errori; stabilisce/mantiene/termina connessioni e controlla congestione.\n- Sessione: controlla il dialogo tra host; token e sincronizzazione.\n- Presentazione: traduce in formati astratti e riconverte; anche compressione e cifratura.\n- Applicazione: interfaccia verso l’utente e servizi applicativi (es. DNS, posta, web).\nIl trasferimento avviene con incapsulamento (ogni livello aggiunge info) e deincapsulamento in ricezione (rimozione progressiva delle info).",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Che cosa descrive il modello ISO–OSI?",
+          "options": [
+            "Un unico protocollo per Internet",
+            "Una suddivisione a livelli delle funzioni di rete",
+            "Un cavo standard per reti locali",
+            "Un sistema operativo per reti"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Nel modello ISO–OSI, quali livelli sono raggruppati come “Data flow” (secondo il testo)?",
+          "options": [
+            "Solo Applicazione",
+            "I livelli più bassi, con funzioni infrastrutturali",
+            "I livelli più alti, vicini all’utente",
+            "Solo Sessione e Presentazione"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Quale livello OSI è indicato come l’unico che riguarda direttamente l’hardware?",
+          "options": [
+            "Trasporto",
+            "Rete",
+            "Fisico",
+            "Applicazione"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "type": "mcq",
+          "prompt": "Quale livello organizza i bit in frame e segnala gli errori di trasmissione?",
+          "options": [
+            "Data Link",
+            "Rete",
+            "Sessione",
+            "Presentazione"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mcq",
+          "prompt": "Quale livello si occupa di routing (instradamento) e di rendere i livelli superiori indipendenti dal mezzo fisico?",
+          "options": [
+            "Fisico",
+            "Rete",
+            "Applicazione",
+            "Presentazione"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Quale livello garantisce un servizio privo di errori end-to-end e controlla la congestione?",
+          "options": [
+            "Trasporto",
+            "Data Link",
+            "Fisico",
+            "Sessione"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mcq",
+          "prompt": "Quale livello traduce i dati in formati astratti e può gestire compressione o cifratura?",
+          "options": [
+            "Applicazione",
+            "Presentazione",
+            "Rete",
+            "Fisico"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Quale livello è più vicino all’utente e include servizi come DNS, e-mail e web?",
+          "options": [
+            "Applicazione",
+            "Trasporto",
+            "Rete",
+            "Data Link"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "prompt": "Nel modello OSI ogni livello comunica con il suo livello omologo sull’altro host.",
+          "correct": true,
+          "explanation": "Il testo specifica la comunicazione con il livello omologo e la presenza della pila completa su ogni host."
+        },
+        {
+          "type": "tf",
+          "prompt": "Nel modello OSI l’incapsulamento avviene risalendo dal fisico verso l’applicazione.",
+          "correct": false,
+          "explanation": "Nel testo il pacchetto parte dall’Applicazione e scende verso il Fisico (incapsulamento)."
+        },
+        {
+          "type": "tf",
+          "prompt": "Il Data Link Layer gestisce anche l’accesso al canale di trasmissione condiviso.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "prompt": "Il livello di sessione si occupa di routing dei pacchetti.",
+          "correct": false
+        },
+        {
+          "type": "short",
+          "prompt": "Spiega in 2–3 righe perché si usa un modello a livelli come ISO–OSI.",
+          "answer": "Per separare le funzioni di rete in moduli (livelli) con gradi di astrazione diversi, semplificando progetto e comunicazione: ogni livello fa compiti specifici e interagisce con gli altri tramite interfacce e protocolli."
+        },
+        {
+          "type": "short",
+          "prompt": "Che cosa sono incapsulamento e deincapsulamento nel modello OSI?",
+          "answer": "Incapsulamento: scendendo dalla pila, ogni livello aggiunge informazioni ai dati ricevuti. Deincapsulamento: risalendo in ricezione, i livelli rimuovono progressivamente tali informazioni fino ai dati originali."
+        }
+      ]
+    },
+
+    {
+      "title": "2.2 Modello ARPANET (TCP/IP)",
+      "definition": "Il modello ARPANET (TCP/IP) è un modello più vicino alla realtà e più semplice dell’OSI: mantiene invariati i livelli di “data flow”, ma compatta gli ultimi tre livelli OSI in un unico livello di processo/applicazione.",
+      "explanation": "TCP/IP elimina la separazione OSI tra sessione, presentazione e applicazione, concentrandole in un unico livello superiore. Secondo il testo, i vantaggi principali sono: (1) stack molto più semplice rispetto a OSI; (2) quando OSI nacque, TCP/IP era già diffuso nel mondo accademico.",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Che cosa cambia principalmente passando dal modello OSI a TCP/IP (ARPANET) secondo il testo?",
+          "options": [
+            "I livelli di data flow vengono eliminati",
+            "Gli ultimi tre livelli OSI vengono compattati in uno solo",
+            "Il livello fisico scompare",
+            "Si aggiungono altri 3 livelli"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Quali livelli OSI vengono “fusi” nel livello processo/applicazione di TCP/IP (secondo il testo)?",
+          "options": [
+            "Fisico, Data Link, Rete",
+            "Sessione, Presentazione, Applicazione",
+            "Rete, Trasporto, Sessione",
+            "Data Link, Rete, Trasporto"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Qual è uno dei due vantaggi di TCP/IP su OSI riportati nel PDF?",
+          "options": [
+            "Ha più livelli",
+            "È più semplice",
+            "È meno usato",
+            "È solo teorico"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "tf",
+          "prompt": "Nel modello TCP/IP, nei livelli di data flow non cambia nulla rispetto a OSI (secondo il testo).",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "prompt": "Secondo il testo, OSI era già molto diffuso nel mondo accademico quando nacque TCP/IP.",
+          "correct": false
+        },
+        {
+          "type": "short",
+          "prompt": "Perché TCP/IP è considerato più “reale” rispetto al modello OSI nel testo?",
+          "answer": "Perché è più semplificato e rispecchia meglio le architetture effettivamente usate, oltre al fatto che era già presente nel mondo accademico quando OSI venne definito."
+        },
+        {
+          "type": "short",
+          "prompt": "In una frase: qual è l’idea chiave della semplificazione TCP/IP rispetto a OSI?",
+          "answer": "Accorpare sessione, presentazione e applicazione in un unico livello superiore di processo/applicazione, mantenendo invariati i livelli bassi."
+        }
+      ]
+    }
+  ]
+}

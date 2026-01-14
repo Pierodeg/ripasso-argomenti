@@ -1,0 +1,122 @@
+{
+  "chapterTitle": "Capitolo 6 – Data Link LAN (Ethernet)",
+  "topics": [
+    {
+      "title": "6.1 Standard IEEE 802.42",
+      "definition": "Lo standard IEEE 802.42 definisce le caratteristiche delle reti locali a livello Data Link.",
+      "explanation": "La famiglia di standard IEEE 802 stabilisce le regole comuni per le LAN. Lo standard 802.42 rientra in questo insieme e fornisce una base concettuale per l’organizzazione del livello Data Link, separando le funzioni MAC e LLC.",
+      "questions": [
+        { "type": "tf", "prompt": "Gli standard IEEE 802 riguardano le reti locali.", "correct": true },
+        { "type": "short", "prompt": "Perché esistono gli standard IEEE?", "answer": "Per garantire interoperabilità tra dispositivi." }
+      ]
+    },
+    {
+      "title": "6.2 Standard IEEE 802.3 Ethernet",
+      "definition": "Lo standard IEEE 802.3 definisce il funzionamento delle reti Ethernet.",
+      "explanation": "IEEE 802.3 specifica il formato dei frame, il metodo di accesso al mezzo e le caratteristiche fisiche di Ethernet. È uno degli standard LAN più diffusi.",
+      "questions": [
+        { "type": "mcq", "prompt": "IEEE 802.3 riguarda:", "options": ["Wi-Fi", "Ethernet", "Token Ring", "Bluetooth"], "correctIndex": 1 },
+        { "type": "tf", "prompt": "Ethernet è uno standard IEEE.", "correct": true }
+      ]
+    },
+    {
+      "title": "6.3 MAC",
+      "definition": "Il MAC controlla l’accesso al mezzo condiviso nelle reti Ethernet.",
+      "explanation": "Il sottolivello MAC stabilisce quando un nodo può trasmettere sul mezzo, gestendo collisioni e indirizzamento fisico.",
+      "questions": [
+        { "type": "short", "prompt": "A cosa serve il MAC?", "answer": "A gestire l’accesso al mezzo condiviso." }
+      ]
+    },
+    {
+      "title": "6.4 MAC PD",
+      "definition": "Il MAC PD descrive le primitive di servizio del sottolivello MAC.",
+      "explanation": "Le primitive MAC PD definiscono le operazioni di invio e ricezione dei frame tra MAC e livelli superiori.",
+      "questions": [
+        { "type": "tf", "prompt": "Il MAC PD è un’interfaccia di servizio.", "correct": true }
+      ]
+    },
+    {
+      "title": "6.5 Funzioni LLC",
+      "definition": "Il sottolivello LLC fornisce servizi al livello di rete.",
+      "explanation": "LLC gestisce il controllo di flusso, il controllo degli errori e fornisce un’interfaccia uniforme ai livelli superiori, indipendentemente dalla tecnologia MAC.",
+      "questions": [
+        { "type": "mcq", "prompt": "LLC si occupa di:", "options": ["Accesso al mezzo", "Servizi al livello rete", "Trasmissione fisica", "Routing"], "correctIndex": 1 }
+      ]
+    },
+    {
+      "title": "6.6 IEEE 802.3 Ethernet",
+      "definition": "IEEE 802.3 Ethernet definisce struttura e funzionamento delle LAN Ethernet.",
+      "explanation": "Questo standard specifica frame Ethernet, indirizzamento MAC, metodo di accesso CSMA/CD e caratteristiche del mezzo.",
+      "questions": [
+        { "type": "tf", "prompt": "IEEE 802.3 definisce il frame Ethernet.", "correct": true }
+      ]
+    },
+    {
+      "title": "6.7 Utilizzazione su Ethernet",
+      "definition": "L’utilizzazione indica quanto efficacemente Ethernet sfrutta il mezzo.",
+      "explanation": "Dipende da collisioni, lunghezza dei frame, numero di nodi e algoritmo di accesso.",
+      "questions": [
+        { "type": "short", "prompt": "Da cosa dipende l’utilizzazione di Ethernet?", "answer": "Collisioni e numero di nodi." }
+      ]
+    },
+    {
+      "title": "6.8 Campo dati e indirizzamento",
+      "definition": "Il frame Ethernet contiene un campo dati e indirizzi MAC.",
+      "explanation": "Gli indirizzi MAC identificano univocamente sorgente e destinazione. Il campo dati trasporta l’informazione utile.",
+      "questions": [
+        { "type": "mcq", "prompt": "Gli indirizzi Ethernet sono:", "options": ["IP", "MAC", "Logici", "Di rete"], "correctIndex": 1 }
+      ]
+    },
+    {
+      "title": "6.9 Lunghezza del frame",
+      "definition": "La lunghezza del frame Ethernet è limitata da valori minimi e massimi.",
+      "explanation": "Esistono lunghezze minime per garantire la rilevazione delle collisioni e limiti massimi per evitare occupazione eccessiva del mezzo.",
+      "questions": [
+        { "type": "tf", "prompt": "La lunghezza minima del frame è importante per CSMA/CD.", "correct": true }
+      ]
+    },
+    {
+      "title": "6.10 Exponential Backoff",
+      "definition": "L’Exponential Backoff è un algoritmo per la gestione delle collisioni.",
+      "explanation": "Dopo una collisione, il nodo attende un tempo casuale crescente prima di ritrasmettere, riducendo la probabilità di nuove collisioni.",
+      "questions": [
+        { "type": "mcq", "prompt": "Exponential Backoff serve a:", "options": ["Aumentare collisioni", "Gestire collisioni", "Codificare dati", "Aumentare banda"], "correctIndex": 1 }
+      ]
+    },
+    {
+      "title": "6.11 Prestazioni di Ethernet",
+      "definition": "Le prestazioni di Ethernet dipendono da carico e collisioni.",
+      "explanation": "Con carico elevato aumentano le collisioni e diminuisce l’efficienza. Ethernet funziona meglio con traffico moderato.",
+      "questions": [
+        { "type": "short", "prompt": "Quando Ethernet è più efficiente?", "answer": "Con traffico moderato." }
+      ]
+    },
+    {
+      "title": "6.12 Tecnologie Ethernet",
+      "definition": "Ethernet si è evoluta in diverse tecnologie.",
+      "explanation": "Nel tempo sono state introdotte varianti Ethernet con diverse velocità e mezzi trasmissivi.",
+      "questions": [
+        { "type": "tf", "prompt": "Ethernet ha subito un’evoluzione tecnologica.", "correct": true }
+      ]
+    },
+    {
+      "title": "6.13 Ethernet a 10, 100, 1000 Mbps",
+      "definition": "Ethernet supporta diverse velocità di trasmissione: 10, 100 e 1000 Mbps.",
+      "explanation": "Ethernet a 10 Mbps rappresenta la versione originale, con CSMA/CD su mezzi condivisi. Ethernet a 100 Mbps (Fast Ethernet) migliora le prestazioni mantenendo compatibilità. Ethernet a 1000 Mbps (Gigabit Ethernet) introduce architetture più avanzate, spesso full-duplex e con switch, riducendo drasticamente le collisioni. L’aumento della velocità ha richiesto adattamenti nei frame, nel cablaggio e nei dispositivi di rete.",
+      "questions": [
+        { "type": "mcq", "prompt": "Fast Ethernet opera a:", "options": ["10 Mbps", "100 Mbps", "1000 Mbps", "10 Gbps"], "correctIndex": 1 },
+        { "type": "mcq", "prompt": "Gigabit Ethernet riduce le collisioni grazie a:", "options": ["Bus", "Switch", "CSMA/CD", "Half-duplex"], "correctIndex": 1 },
+        { "type": "tf", "prompt": "Gigabit Ethernet è spesso full-duplex.", "correct": true },
+        { "type": "short", "prompt": "Perché l’aumento di velocità ha richiesto nuove tecnologie?", "answer": "Per gestire traffico maggiore e ridurre collisioni." }
+      ]
+    },
+    {
+      "title": "6.14 Livelli Gigabit Ethernet",
+      "definition": "Gigabit Ethernet è organizzata su più livelli.",
+      "explanation": "I livelli definiscono le funzioni fisiche e logiche necessarie a supportare la trasmissione a 1000 Mbps.",
+      "questions": [
+        { "type": "tf", "prompt": "Gigabit Ethernet introduce nuovi livelli.", "correct": true }
+      ]
+    }
+  ]
+}

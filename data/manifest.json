@@ -5,7 +5,8 @@
       "chapters": [
         { "id": "cap1", "title": "Capitolo 1 – La rete", "json": "data/Reti di Calcolatori/cap1.json" },
         { "id": "cap2", "title": "Capitolo 2 – Modello ISO-OSI", "json": "data/Reti di Calcolatori/cap2.json" },
-        { "id": "cap3", "title": "Capitolo 3 – Livello Fisico", "json": "data/Reti di Calcolatori/cap3.json" }
+        { "id": "cap3", "title": "Capitolo 3 – Livello Fisico", "json": "data/Reti di Calcolatori/cap3.json" },
+        { "id": "cap4", "title": "Capitolo 4 – Livello Data Link", "json": "data/Reti di Calcolatori/cap4.json" }
       ]
     },
     {

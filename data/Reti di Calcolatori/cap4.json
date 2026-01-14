@@ -1,0 +1,442 @@
+{
+    "chapterTitle": "Capitolo 4 – Livello Data Link",
+    "topics": [
+        {
+            "title": "4.1 Data Link Layer",
+            "definition": "Il Data Link Layer è il livello che garantisce la comunicazione affidabile tra due nodi adiacenti collegati fisicamente.",
+            "explanation": "Il livello Data Link si colloca tra il livello fisico e il livello di rete e ha il compito di organizzare il trasferimento dei dati su un singolo collegamento. Fornisce allo strato di rete un’interfaccia uniforme, mascherando le caratteristiche del mezzo fisico. Le sue funzioni principali includono il framing, il controllo di flusso, la rilevazione e la correzione degli errori e la gestione delle modalità half-duplex e full-duplex. Opera su frame e utilizza indirizzi MAC per identificare i nodi.",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "prompt": "Qual è la funzione principale del Data Link Layer?",
+                    "options": [
+                        "Instradamento",
+                        "Comunicazione tra nodi adiacenti",
+                        "Gestione applicazioni",
+                        "Cifratura"
+                    ],
+                    "correctIndex": 1
+                },
+                {
+                    "type": "tf",
+                    "prompt": "Il Data Link Layer utilizza indirizzi MAC.",
+                    "correct": true
+                },
+                {
+                    "type": "short",
+                    "prompt": "Tra quali livelli si trova il Data Link Layer?",
+                    "answer": "Tra livello fisico e livello di rete."
+                }
+            ]
+        },
+        {
+            "title": "4.2 Problemi del livello 2",
+            "definition": "Il livello 2 deve affrontare problemi legati all’affidabilità della comunicazione su collegamenti fisici.",
+            "explanation": "I principali problemi del livello Data Link includono errori di trasmissione dovuti a rumore e attenuazione, perdita di frame, duplicazioni, controllo del flusso per evitare la saturazione del ricevitore e gestione dell’accesso al mezzo condiviso. Questi problemi devono essere risolti localmente tra nodi adiacenti.",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "prompt": "Quale problema affronta il livello 2?",
+                    "options": [
+                        "Routing",
+                        "Errori di trasmissione",
+                        "DNS",
+                        "Applicazioni"
+                    ],
+                    "correctIndex": 1
+                },
+                {
+                    "type": "tf",
+                    "prompt": "Il controllo del flusso evita la saturazione del nodo ricevente.",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "title": "4.3 Framing",
+            "definition": "Il framing è il processo di suddivisione del flusso di bit in unità chiamate frame.",
+            "explanation": "Il livello Data Link incapsula i datagrammi del livello di rete all’interno di frame. Ogni frame contiene dati, intestazione e informazioni di controllo. Il framing consente di delimitare l’inizio e la fine dei dati e di rilevare errori di trasmissione.",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "prompt": "Il framing serve a:",
+                    "options": [
+                        "Instradare pacchetti",
+                        "Delimitare i dati",
+                        "Cifrare dati",
+                        "Amplificare segnali"
+                    ],
+                    "correctIndex": 1
+                },
+                {
+                    "type": "tf",
+                    "prompt": "Il frame contiene solo dati.",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "title": "4.4 Violazioni di codifica",
+            "definition": "Le violazioni di codifica sono tecniche per individuare errori nella trasmissione.",
+            "explanation": "Alcune codifiche prevedono combinazioni di bit non valide. Se il ricevitore rileva una sequenza vietata, può identificare la presenza di un errore senza bisogno di bit aggiuntivi.",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "prompt": "Le violazioni di codifica servono a:",
+                    "options": [
+                        "Ridurre la banda",
+                        "Rilevare errori",
+                        "Aumentare la velocità",
+                        "Cifrare dati"
+                    ],
+                    "correctIndex": 1
+                }
+            ]
+        },
+        {
+            "title": "4.5 Rilevazione dell’errore",
+            "definition": "La rilevazione dell’errore permette di individuare errori nei frame ricevuti.",
+            "explanation": "Il nodo trasmittente inserisce informazioni di controllo che consentono al ricevitore di verificare l’integrità dei dati. In caso di errore, il frame viene scartato o richiesto nuovamente.",
+            "questions": [
+                {
+                    "type": "tf",
+                    "prompt": "La rilevazione degli errori avviene tramite bit di controllo.",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "title": "4.6 Controllo di parità",
+            "definition": "Il controllo di parità è una tecnica semplice per la rilevazione degli errori.",
+            "explanation": "Consiste nell’aggiungere un bit che rende pari o dispari il numero di bit a 1. Permette di individuare errori singoli ma non multipli.",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "prompt": "Il controllo di parità rileva:",
+                    "options": [
+                        "Tutti gli errori",
+                        "Errori singoli",
+                        "Errori multipli",
+                        "Nessun errore"
+                    ],
+                    "correctIndex": 1
+                }
+            ]
+        },
+        {
+            "title": "4.7 Campi di Galois",
+            "definition": "I campi di Galois sono strutture matematiche usate per il controllo degli errori.",
+            "explanation": "Vengono utilizzati per operazioni sui bit in aritmetica modulare, fondamentali nelle tecniche di codifica e controllo degli errori come il CRC.",
+            "questions": [
+                {
+                    "type": "short",
+                    "prompt": "Per cosa si usano i campi di Galois?",
+                    "answer": "Per il controllo degli errori nei dati."
+                }
+            ]
+        },
+        {
+            "title": "4.8 Rappresentazione di sequenze di bit tramite polinomi",
+            "definition": "Le sequenze di bit possono essere rappresentate come polinomi.",
+            "explanation": "Ogni bit rappresenta un coefficiente del polinomio. Questa rappresentazione è alla base della codifica polinomiale utilizzata nel controllo degli errori.",
+            "questions": [
+                {
+                    "type": "tf",
+                    "prompt": "Ogni bit può essere visto come coefficiente di un polinomio.",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "title": "4.9 Codifica polinomiale",
+            "definition": "La codifica polinomiale è una tecnica avanzata di rilevazione degli errori.",
+            "explanation": "Utilizza divisioni polinomiali per generare bit di controllo (CRC). È molto efficace nel rilevare errori multipli.",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "prompt": "La codifica polinomiale è alla base di:",
+                    "options": [
+                        "Parity check",
+                        "CRC",
+                        "Routing",
+                        "MAC"
+                    ],
+                    "correctIndex": 1
+                }
+            ]
+        },
+        {
+            "title": "4.10 Controllo di flusso",
+            "definition": "Il controllo di flusso evita che il mittente sovraccarichi il ricevitore.",
+            "explanation": "Regola la quantità di frame inviati in base alla capacità del ricevitore, prevenendo congestioni e perdite di dati.",
+            "questions": [
+                {
+                    "type": "tf",
+                    "prompt": "Il controllo di flusso previene la saturazione del ricevitore.",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "title": "4.11 Frame Data Link",
+            "definition": "Il frame è l’unità di trasmissione del Data Link Layer.",
+            "explanation": "Contiene intestazione, dati e campi di controllo per indirizzamento ed error checking.",
+            "questions": [
+                {
+                    "type": "short",
+                    "prompt": "Cosa contiene un frame?",
+                    "answer": "Intestazione, dati e controllo."
+                }
+            ]
+        },
+        {
+            "title": "4.12 Protocolli Data Link",
+            "definition": "I protocolli Data Link regolano lo scambio di frame tra nodi adiacenti.",
+            "explanation": "Definiscono regole per trasmissione, riscontro, controllo degli errori e del flusso. Sono fondamentali per garantire una comunicazione affidabile sul collegamento.",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "prompt": "I protocolli Data Link operano su:",
+                    "options": [
+                        "Pacchetti IP",
+                        "Frame",
+                        "Segmenti TCP",
+                        "Bit"
+                    ],
+                    "correctIndex": 1
+                }
+            ]
+        },
+        {
+            "title": "4.13 Trasferimento dati affidabile",
+            "definition": "Il trasferimento dati affidabile garantisce che i frame arrivino al destinatario correttamente e nell’ordine giusto.",
+            "explanation": "Il trasferimento dati affidabile è un problema centrale del Data Link Layer. Il canale fisico può introdurre errori, perdite o duplicazioni di frame. Per questo motivo vengono utilizzati meccanismi di riscontro (ACK), numerazione dei frame, ritrasmissioni e timeout. Il mittente conserva una copia dei frame inviati finché non riceve conferma della corretta ricezione. In caso di errore o mancato riscontro, il frame viene ritrasmesso. Questi meccanismi permettono di rendere affidabile un canale intrinsecamente inaffidabile.",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "prompt": "Qual è l’obiettivo del trasferimento dati affidabile?",
+                    "options": [
+                        "Aumentare la velocità",
+                        "Garantire correttezza e ordine dei dati",
+                        "Ridurre il rumore",
+                        "Evitare il framing"
+                    ],
+                    "correctIndex": 1
+                },
+                {
+                    "type": "mcq",
+                    "prompt": "Cosa indica un ACK?",
+                    "options": [
+                        "Un errore",
+                        "Un riscontro positivo",
+                        "Un timeout",
+                        "Una perdita di frame"
+                    ],
+                    "correctIndex": 1
+                },
+                {
+                    "type": "mcq",
+                    "prompt": "Quando avviene una ritrasmissione?",
+                    "options": [
+                        "Sempre",
+                        "Quando il frame è corretto",
+                        "Quando manca o è errato l’ACK",
+                        "Quando il canale è libero"
+                    ],
+                    "correctIndex": 2
+                },
+                {
+                    "type": "tf",
+                    "prompt": "Il trasferimento affidabile usa numeri di sequenza.",
+                    "correct": true
+                },
+                {
+                    "type": "tf",
+                    "prompt": "Un canale fisico è sempre affidabile.",
+                    "correct": false
+                },
+                {
+                    "type": "short",
+                    "prompt": "Perché servono i timeout?",
+                    "answer": "Per rilevare la perdita di frame o di ACK."
+                },
+                {
+                    "type": "short",
+                    "prompt": "Che problema risolve il trasferimento affidabile?",
+                    "answer": "Errori, perdite e duplicazioni di frame."
+                }
+            ]
+        },
+        {
+            "title": "4.14 Protocolli con pipeline",
+            "definition": "I protocolli con pipeline permettono l’invio di più frame senza attendere il riscontro di ciascuno.",
+            "explanation": "Nei protocolli con pipeline il mittente può trasmettere più frame consecutivamente prima di ricevere gli ACK. Questo migliora l’efficienza del canale, specialmente su collegamenti con elevato ritardo di propagazione. Tuttavia, richiede meccanismi più complessi per la gestione degli errori, come finestre di trasmissione e buffer per i frame non ancora confermati.",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "prompt": "Cosa caratterizza un protocollo con pipeline?",
+                    "options": [
+                        "Un solo frame alla volta",
+                        "Più frame senza attendere ACK",
+                        "Assenza di numerazione",
+                        "Assenza di errori"
+                    ],
+                    "correctIndex": 1
+                },
+                {
+                    "type": "mcq",
+                    "prompt": "Qual è il vantaggio principale della pipeline?",
+                    "options": [
+                        "Semplicità",
+                        "Riduzione dell’uso di memoria",
+                        "Migliore utilizzo del canale",
+                        "Eliminazione degli ACK"
+                    ],
+                    "correctIndex": 2
+                },
+                {
+                    "type": "tf",
+                    "prompt": "I protocolli con pipeline migliorano l’efficienza.",
+                    "correct": true
+                },
+                {
+                    "type": "tf",
+                    "prompt": "La pipeline elimina il controllo degli errori.",
+                    "correct": false
+                },
+                {
+                    "type": "short",
+                    "prompt": "Perché la pipeline è utile su canali con grande ritardo?",
+                    "answer": "Per evitare di lasciare il canale inutilizzato."
+                }
+            ]
+        },
+        {
+            "title": "4.15 Protocolli a finestra scorrevole",
+            "definition": "I protocolli a finestra scorrevole regolano il numero di frame che possono essere trasmessi senza riscontro.",
+            "explanation": "La finestra scorrevole definisce l’intervallo di numeri di sequenza che il mittente può utilizzare. Quando arrivano gli ACK, la finestra avanza permettendo l’invio di nuovi frame. Questo meccanismo combina controllo di flusso e controllo degli errori. Esistono varianti come Go-Back-N e Selective Repeat, che differiscono nel modo di gestire le ritrasmissioni.",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "prompt": "Cosa rappresenta la finestra?",
+                    "options": [
+                        "Un frame",
+                        "Un buffer",
+                        "Un intervallo di numeri di sequenza",
+                        "Un ACK"
+                    ],
+                    "correctIndex": 2
+                },
+                {
+                    "type": "mcq",
+                    "prompt": "Quando la finestra scorre?",
+                    "options": [
+                        "Quando il canale è pieno",
+                        "Quando arrivano gli ACK",
+                        "Quando avviene un errore",
+                        "Quando scade il timeout"
+                    ],
+                    "correctIndex": 1
+                },
+                {
+                    "type": "mcq",
+                    "prompt": "Quale protocollo ritrasmette più frame dopo un errore?",
+                    "options": [
+                        "Stop-and-Wait",
+                        "Selective Repeat",
+                        "Go-Back-N",
+                        "Parity Check"
+                    ],
+                    "correctIndex": 2
+                },
+                {
+                    "type": "tf",
+                    "prompt": "La finestra scorrevole unisce controllo di flusso ed errori.",
+                    "correct": true
+                },
+                {
+                    "type": "tf",
+                    "prompt": "Selective Repeat ritrasmette tutti i frame precedenti.",
+                    "correct": false
+                },
+                {
+                    "type": "short",
+                    "prompt": "Differenza tra Go-Back-N e Selective Repeat?",
+                    "answer": "Go-Back-N ritrasmette più frame, Selective Repeat solo quelli errati."
+                }
+            ]
+        },
+        {
+            "title": "4.16 Trasmissione full-duplex",
+            "definition": "La trasmissione full-duplex consente l’invio e la ricezione simultanea dei dati.",
+            "explanation": "Nel full-duplex entrambi i nodi possono trasmettere e ricevere contemporaneamente. Questo raddoppia la capacità logica del collegamento rispetto all’half-duplex, dove la comunicazione avviene in una sola direzione per volta.",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "prompt": "Nel full-duplex:",
+                    "options": [
+                        "Si trasmette in una sola direzione",
+                        "Si trasmette e riceve simultaneamente",
+                        "Non esistono collisioni",
+                        "Non servono protocolli"
+                    ],
+                    "correctIndex": 1
+                },
+                {
+                    "type": "tf",
+                    "prompt": "Il full-duplex è più efficiente dell’half-duplex.",
+                    "correct": true
+                },
+                {
+                    "type": "short",
+                    "prompt": "Qual è il vantaggio del full-duplex?",
+                    "answer": "Comunicazione simultanea in entrambe le direzioni."
+                }
+            ]
+        },
+        {
+            "title": "4.17 Controllo degli ACK piggybacking",
+            "definition": "Il piggybacking è una tecnica che combina ACK e dati nello stesso frame.",
+            "explanation": "Nel piggybacking, quando due nodi comunicano in full-duplex, il riscontro (ACK) non viene inviato in un frame separato ma viene inserito nel campo di controllo di un frame dati diretto nella direzione opposta. Questo riduce il numero di frame trasmessi e migliora l’efficienza complessiva del protocollo.",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "prompt": "Cos’è il piggybacking?",
+                    "options": [
+                        "Un tipo di errore",
+                        "Una tecnica di codifica",
+                        "Unione di ACK e dati",
+                        "Un protocollo di rete"
+                    ],
+                    "correctIndex": 2
+                },
+                {
+                    "type": "mcq",
+                    "prompt": "Il piggybacking è possibile grazie a:",
+                    "options": [
+                        "Half-duplex",
+                        "Full-duplex",
+                        "Rumore",
+                        "Timeout"
+                    ],
+                    "correctIndex": 1
+                },
+                {
+                    "type": "tf",
+                    "prompt": "Il piggybacking riduce il numero di frame trasmessi.",
+                    "correct": true
+                },
+                {
+                    "type": "tf",
+                    "prompt": "Il piggybacking richiede frame separati per gli ACK.",
+                    "correct": false
+                },
+                {
+                    "type": "short",
+                    "prompt": "Perché il piggybacking migliora l’efficienza?",
+                    "answer": "Perché evita l’invio di ACK separati."
+                }
+            ]
+        }
+    ]
+}

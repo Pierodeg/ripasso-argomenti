@@ -1,0 +1,74 @@
+:root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+body { margin:0; background:#0b0c10; color:#e8e8ea; }
+
+.container { max-width: 1050px; margin: 0 auto; padding: 16px; }
+.header { position: sticky; top:0; background:#0f1117; border-bottom:1px solid #222; z-index: 10; }
+
+h1 { margin:0; font-size: 20px; }
+h2 { margin:0; font-size: 18px; }
+h3 { margin:0; font-size: 16px; }
+
+.muted { color:#a9afbd; font-size: 13px; }
+.hidden { display:none !important; }
+
+.card { background:#10141d; border:1px solid #232a3a; border-radius:14px; padding:14px; margin-top:14px; }
+.hr { height:1px; background:#232a3a; margin: 12px 0; }
+
+.row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+.space-between { justify-content: space-between; align-items:center; }
+
+select, .input, .btn {
+  border:1px solid #232a3a;
+  background:#0b0c10;
+  color:#e8e8ea;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.input { min-width: 240px; flex: 1; }
+.btn { cursor:pointer; }
+.btn.secondary { background:#121826; }
+.btn:disabled { opacity: .55; cursor:not-allowed; }
+
+.pill {
+  display:inline-block; padding: 4px 10px; border-radius:999px;
+  border:1px solid #2a3244; font-size:12px; color:#a9afbd;
+}
+
+.list { display:grid; gap:10px; margin-top:10px; }
+.item {
+  border:1px solid #232a3a; border-radius:14px; padding:12px 14px; background:#0b0f17;
+  cursor:pointer;
+}
+.item:hover { border-color:#2f3a52; }
+
+details {
+  border:1px solid #232a3a;
+  border-radius:14px;
+  overflow:hidden;
+  background:#0f131b;
+  margin-top:12px;
+}
+summary {
+  padding: 12px 14px;
+  cursor:pointer;
+  font-weight: 800;
+  list-style:none;
+}
+summary::-webkit-details-marker { display:none; }
+
+.topic { border-top:1px solid #232a3a; padding: 12px 14px; background:#0b0f17; }
+
+.q {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border:1px solid #232a3a;
+  border-radius: 12px;
+  background:#0b0c10;
+}
+.q-title { font-weight: 700; margin-bottom: 8px; }
+.opt { display:flex; gap:10px; align-items:flex-start; padding: 6px 0; }
+.btn-small { padding: 8px 10px; border-radius: 10px; border:1px solid #2a3244; background:#0b0c10; color:#e8e8ea; cursor:pointer; }
+
+.ok { color:#7CFFB2; }
+.bad { color:#FF7C7C; }

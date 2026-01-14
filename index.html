@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Ripasso Argomenti</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0f1117">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+<header class="header">
+  <div class="container">
+    <div class="row space-between">
+      <div>
+        <h1>Ripasso Argomenti</h1>
+        <p class="muted" id="subtitle">Materie → Capitoli → Argomenti → Domande</p>
+      </div>
+      <button id="installBtn" class="btn secondary hidden">Installa</button>
+    </div>
+
+    <div class="row" style="margin-top:10px;">
+      <button id="viewSubjectsBtn" class="btn secondary">Materie</button>
+      <button id="viewChaptersBtn" class="btn secondary" disabled>Capitoli</button>
+      <button id="viewStudyBtn" class="btn secondary" disabled>Studio</button>
+
+      <input id="search" class="input" type="search" placeholder="Cerca argomento o domanda…" />
+      <button id="expandAllBtn" class="btn secondary">Espandi</button>
+      <button id="collapseAllBtn" class="btn secondary">Comprimi</button>
+    </div>
+
+    <p id="status" class="muted" style="margin-top:10px;"></p>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card" id="panel"></section>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "subject": "Reti di Calcolatori",
+  "chapterId": "cap1",
+  "chapterTitle": "Capitolo 1 – La rete",
+  "topics": [
+    {
+      "id": "1.4",
+      "title": "1.4 DTE (Data Terminal Equipment)",
+      "definition": "Il DTE (Data Terminal Equipment) è l’insieme costituito da un sistema di elaborazione e dalle sue risorse, che agisce come utente finale della rete e ha lo scopo di generare, elaborare e utilizzare dati trasmessi attraverso la rete.",
+      "explanation": "Il DTE comprende sistema, terminale e risorse applicative/I-O; può essere PC, supercalcolatore o dispositivo IoT. Comunica tramite un DCE (tipicamente switch/router). La rete interconnette i DTE per scambio dati, condivisione risorse e cooperazione tra processi.",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Qual è il ruolo del DTE in una rete?",
+          "options": [
+            "Nodo intermedio che instrada pacchetti",
+            "Utente finale che genera/usa dati e risorse",
+            "Protocollo di livello trasporto",
+            "Mezzo fisico di trasmissione"
+          ],
+          "correctIndex": 1,
+          "explanation": "Il DTE è il sistema/host utente finale con le sue risorse."
+        },
+        {
+          "type": "tf",
+          "prompt": "Il DTE comunica con la rete tramite un DCE.",
+          "correct": true,
+          "explanation": "Il DCE fornisce il collegamento alla rete."
+        },
+        {
+          "type": "short",
+          "prompt": "Spiega in una frase perché serve il DCE.",
+          "answer": "Perché il DCE fornisce l’accesso e la terminazione del collegamento verso la rete."
+        }
+      ]
+    }
+  ]
+}

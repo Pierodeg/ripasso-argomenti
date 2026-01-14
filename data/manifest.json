@@ -1,0 +1,17 @@
+{
+  "subjects": [
+    {
+      "name": "Reti di Calcolatori",
+      "chapters": [
+        { "id": "cap1", "title": "Capitolo 1 – La rete", "json": "data/Reti di Calcolatori/cap1.json" },
+        { "id": "cap2", "title": "Capitolo 2 – Modello ISO-OSI", "json": "data/Reti di Calcolatori/cap2.json" }
+      ]
+    },
+    {
+      "name": "Sistemi Operativi",
+      "chapters": [
+        { "id": "cap1", "title": "Capitolo 1 – Introduzione", "json": "data/Sistemi Operativi/cap1.json" }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,25 @@
+// ---------- Theme toggle ----------
+const themeBtn = document.getElementById("themeToggleBtn");
+const THEME_KEY = "ripasso-theme";
+
+initTheme();
+
+function initTheme() {
+  const saved = localStorage.getItem(THEME_KEY) || "dark";
+  setTheme(saved);
+}
+
+function setTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  themeBtn.textContent = theme === "dark" ? "☀️" : "🌙";
+  localStorage.setItem(THEME_KEY, theme);
+}
+
+themeBtn.addEventListener("click", () => {
+  const current = document.documentElement.getAttribute("data-theme") || "dark";
+  setTheme(current === "dark" ? "light" : "dark");
+});
+
 // ---------------- PWA Install ----------------
 let deferredPrompt = null;
 const installBtn = document.getElementById("installBtn");

@@ -1,0 +1,354 @@
+{
+    "chapterTitle": "Capitolo 1 – I Segnali",
+    "topics": [
+        {
+            "title": "3.1 I segnali",
+            "definition": "Un segnale è una grandezza fisica variabile nel tempo utilizzata per rappresentare e trasportare informazioni.",
+            "explanation": "Nel livello fisico delle reti, l’informazione viene trasmessa sotto forma di segnali. Un segnale può essere periodico o aperiodico: un segnale periodico si ripete identico dopo un certo intervallo di tempo, mentre un segnale aperiodico non presenta ripetitività. Il segnale sinusoidale è il segnale periodico fondamentale ed è descritto da parametri come periodo, frequenza, ampiezza e fase. Il periodo rappresenta il tempo necessario a completare un ciclo, la frequenza indica il numero di cicli al secondo, l’ampiezza misura l’intensità del segnale e la fase descrive lo spostamento temporale. I segnali digitali, invece, assumono valori discreti (tipicamente 0 e 1) e sono più resistenti al rumore rispetto ai segnali analogici.",
+            "questions": [
+                { "type": "mcq", "prompt": "Che cos’è un segnale?", "options": ["Un protocollo", "Una grandezza fisica variabile nel tempo", "Un dispositivo", "Un pacchetto"], "correctIndex": 1 },
+                { "type": "mcq", "prompt": "Quando un segnale è periodico?", "options": ["Quando non varia", "Quando si ripete nel tempo", "Quando è digitale", "Quando è rumoroso"], "correctIndex": 1 },
+                { "type": "mcq", "prompt": "Quali parametri caratterizzano una sinusoide?", "options": ["Periodo, frequenza, ampiezza, fase", "Codifica e modulazione", "Bit e frame", "Rumore e attenuazione"], "correctIndex": 0 },
+                { "type": "tf", "prompt": "La frequenza è l’inverso del periodo.", "correct": true },
+                { "type": "tf", "prompt": "I segnali digitali sono più sensibili al rumore.", "correct": false },
+                { "type": "short", "prompt": "Differenza tra segnale analogico e digitale?", "answer": "Il segnale analogico è continuo, quello digitale assume valori discreti." },
+                { "type": "short", "prompt": "Perché la sinusoide è importante?", "answer": "Perché permette di rappresentare segnali complessi." }
+            ]
+            },
+
+            {
+            "title": "3.2 Trasmissione dei segnali",
+            "definition": "La trasmissione dei segnali è il processo con cui un segnale viene inviato da un trasmettitore a un ricevitore.",
+            "explanation": "Durante la trasmissione, il segnale attraversa un mezzo trasmissivo e può subire attenuazione, distorsione e rumore. La qualità della trasmissione dipende dal mezzo utilizzato e dalle tecniche impiegate.",
+            "questions": [
+                { "type": "mcq", "prompt": "Che cosa descrive la trasmissione dei segnali?", "options": ["Memorizzazione", "Invio dell’informazione", "Codifica", "Routing"], "correctIndex": 1 },
+                { "type": "tf", "prompt": "Il segnale può degradarsi durante la trasmissione.", "correct": true },
+                { "type": "short", "prompt": "Quali elementi partecipano alla trasmissione?", "answer": "Trasmettitore, mezzo trasmissivo e ricevitore." }
+            ]
+            },
+
+            {
+            "title": "3.3 Serie di Fourier",
+            "definition": "La serie di Fourier consente di rappresentare un segnale periodico come somma di segnali sinusoidali.",
+            "explanation": "Grazie alla serie di Fourier è possibile analizzare i segnali nel dominio delle frequenze, comprendendo quali componenti sinusoidali li costituiscono.",
+            "questions": [
+                { "type": "mcq", "prompt": "A cosa serve la serie di Fourier?", "options": ["Trasmettere dati", "Scomporre segnali", "Ridurre rumore", "Codificare bit"], "correctIndex": 1 },
+                { "type": "tf", "prompt": "Un segnale periodico può essere scomposto in sinusoidi.", "correct": true },
+                { "type": "short", "prompt": "Perché è utile il dominio delle frequenze?", "answer": "Per analizzare le componenti di un segnale." }
+            ]
+            },
+
+            {
+            "title": "3.4 Segnali campionati e quantizzati",
+            "definition": "Campionamento e quantizzazione permettono la conversione di un segnale analogico in digitale.",
+            "explanation": "Il campionamento seleziona valori del segnale nel tempo, mentre la quantizzazione associa a ogni campione un valore discreto. Queste operazioni rendono possibile l’elaborazione digitale dei segnali.",
+            "questions": [
+                { "type": "mcq", "prompt": "Il campionamento agisce su:", "options": ["Ampiezza", "Tempo", "Frequenza", "Rumore"], "correctIndex": 1 },
+                { "type": "tf", "prompt": "La quantizzazione produce valori discreti.", "correct": true },
+                { "type": "short", "prompt": "Perché servono campionamento e quantizzazione?", "answer": "Per digitalizzare segnali analogici." }
+            ]
+            },
+
+            {
+            "title": "3.5 Il rumore",
+            "definition": "Il rumore è un disturbo indesiderato che altera il segnale.",
+            "explanation": "Il rumore degrada la qualità della comunicazione e può causare errori nella ricezione dei dati.",
+            "questions": [
+                { "type": "mcq", "prompt": "Il rumore provoca:", "options": ["Miglioramento", "Errori", "Aumento banda", "Codifica"], "correctIndex": 1 },
+                { "type": "tf", "prompt": "Il rumore è sempre eliminabile.", "correct": false },
+                { "type": "short", "prompt": "Perché il rumore è un problema?", "answer": "Perché altera l’informazione trasmessa." }
+            ]
+            },
+
+            {
+            "title": "3.6 Prestazioni di una rete",
+            "definition": "Le prestazioni indicano la qualità del servizio offerto da una rete.",
+            "explanation": "Dipendono da velocità, affidabilità, rumore e caratteristiche del mezzo trasmissivo.",
+            "questions": [
+                { "type": "mcq", "prompt": "Le prestazioni misurano:", "options": ["Numero nodi", "Qualità comunicazione", "Topologia", "Protocollo"], "correctIndex": 1 },
+                { "type": "tf", "prompt": "Il rumore influisce sulle prestazioni.", "correct": true },
+                { "type": "short", "prompt": "Cita un fattore che influisce sulle prestazioni.", "answer": "Il rumore o la velocità di trasmissione." }
+            ]
+            },
+
+            {
+            "title": "3.7 Trasmissione dei segnali",
+            "definition": "La trasmissione dei segnali descrive le modalità di invio dell’informazione.",
+            "explanation": "La scelta delle modalità di trasmissione influisce direttamente su efficienza e affidabilità.",
+            "questions": [
+                { "type": "tf", "prompt": "La trasmissione è centrale nel livello fisico.", "correct": true },
+                { "type": "short", "prompt": "Perché la trasmissione è importante?", "answer": "Perché permette il trasferimento dell’informazione." }
+            ]
+            },
+
+            {
+            "title": "3.8 Codifica dei dati numerici",
+            "definition": "La codifica dei dati numerici definisce come i bit vengono rappresentati tramite segnali.",
+            "explanation": "La codifica di linea traduce sequenze di bit in segnali fisici. Esistono codifiche unipolari, NRZ, Manchester, multilivello, B8ZS e HDB3, ciascuna con specifiche caratteristiche in termini di sincronizzazione, efficienza e robustezza.",
+            "questions": [
+                { "type": "mcq", "prompt": "A cosa serve la codifica di linea?", "options": ["Modulare", "Rappresentare bit", "Multiplexare", "Amplificare"], "correctIndex": 1 },
+                { "type": "mcq", "prompt": "Manchester è una codifica:", "options": ["Unipolare", "Bipolare", "Con transizione centrale", "Multilivello"], "correctIndex": 2 },
+                { "type": "tf", "prompt": "B8ZS e HDB3 riducono sequenze di zeri.", "correct": true },
+                { "type": "short", "prompt": "Perché esistono più codifiche?", "answer": "Per adattarsi a diverse esigenze di trasmissione." }
+            ]
+            },
+
+            {
+            "title": "3.9 La modulazione",
+            "definition": "La modulazione è il processo che adatta un segnale informativo a una portante.",
+            "explanation": "La modulazione permette di trasmettere informazioni su mezzi che non potrebbero supportare direttamente il segnale originale, variando ampiezza, frequenza o fase della portante.",
+            "questions": [
+                { "type": "mcq", "prompt": "A cosa serve la modulazione?", "options": ["Codificare", "Adattare il segnale", "Eliminare rumore", "Multiplexare"], "correctIndex": 1 },
+                { "type": "tf", "prompt": "La modulazione agisce sulla portante.", "correct": true },
+                { "type": "short", "prompt": "Perché la modulazione è necessaria?", "answer": "Per trasmettere efficacemente l’informazione." }
+            ]
+            },
+
+            {
+                "title": "3.10 Multiplexer e Demultiplexer",
+                "definition": "Il multiplexer è un dispositivo che consente di trasmettere più segnali su un unico canale, mentre il demultiplexer separa i segnali in ricezione.",
+                "explanation": "Il multiplexer combina più flussi informativi provenienti da sorgenti diverse e li convoglia su un solo mezzo trasmissivo. Il demultiplexer, posto sul lato ricevente, esegue l’operazione inversa, separando i flussi originali. Questo meccanismo è alla base delle tecniche di multiplazione, che permettono di sfruttare in modo efficiente la capacità del canale riducendo i costi infrastrutturali.",
+                "questions": [
+                    { "type": "mcq", "prompt": "A cosa serve un multiplexer?", "options": ["Separare segnali", "Unire più segnali", "Amplificare il segnale", "Codificare dati"], "correctIndex": 1 },
+                    { "type": "mcq", "prompt": "Il demultiplexer si trova:", "options": ["Solo in trasmissione", "Solo in ricezione", "Nel routing", "Nel livello applicativo"], "correctIndex": 1 },
+                    { "type": "mcq", "prompt": "Multiplexer e demultiplexer permettono di:", "options": ["Ridurre il rumore", "Sfruttare meglio il canale", "Eliminare la codifica", "Aumentare la latenza"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "Il multiplexer combina più flussi su un unico mezzo.", "correct": true },
+                    { "type": "tf", "prompt": "Il demultiplexer unisce i segnali.", "correct": false },
+                    { "type": "short", "prompt": "Perché si usano multiplexer e demultiplexer?", "answer": "Per trasmettere più segnali su un unico canale in modo efficiente." },
+                    { "type": "short", "prompt": "Qual è il ruolo del demultiplexer?", "answer": "Separare i flussi informativi ricevuti." }
+                ]
+                },
+
+                {
+                "title": "3.11 Slot e frame",
+                "definition": "Slot e frame sono strutture temporali utilizzate per organizzare la trasmissione dei dati.",
+                "explanation": "Nelle comunicazioni temporizzate, il tempo viene suddiviso in slot, ciascuno dei quali può essere assegnato a una sorgente. Più slot consecutivi formano un frame. Questa organizzazione è fondamentale nelle tecniche di multiplazione temporale.",
+                "questions": [
+                    { "type": "mcq", "prompt": "Che cos’è uno slot?", "options": ["Un pacchetto", "Un intervallo di tempo", "Un canale", "Un segnale"], "correctIndex": 1 },
+                    { "type": "mcq", "prompt": "Un frame è:", "options": ["Un insieme di slot", "Un singolo bit", "Un protocollo", "Una frequenza"], "correctIndex": 0 },
+                    { "type": "tf", "prompt": "Gli slot rappresentano divisioni temporali.", "correct": true },
+                    { "type": "tf", "prompt": "I frame non contengono slot.", "correct": false },
+                    { "type": "short", "prompt": "Perché slot e frame sono importanti?", "answer": "Per organizzare in modo ordinato la trasmissione nel tempo." },
+                    { "type": "short", "prompt": "In quale tecnica sono usati slot e frame?", "answer": "Nella multiplazione temporale." }
+                ]
+                },
+
+                {
+                "title": "3.12 TDM deterministico e statistico",
+                "definition": "Il Time Division Multiplexing è una tecnica di multiplazione che divide il canale nel tempo.",
+                "explanation": "Nel TDM deterministico a ogni sorgente viene assegnato uno slot fisso in ogni frame, anche se non ha dati da trasmettere. Nel TDM statistico, invece, gli slot vengono assegnati dinamicamente solo alle sorgenti attive, migliorando l’efficienza del canale.",
+                "questions": [
+                    { "type": "mcq", "prompt": "Su cosa si basa il TDM?", "options": ["Frequenza", "Tempo", "Codice", "Ampiezza"], "correctIndex": 1 },
+                    { "type": "mcq", "prompt": "Nel TDM statistico gli slot sono:", "options": ["Fissi", "Dinamici", "Casuali", "Inutilizzati"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "Il TDM deterministico assegna slot fissi.", "correct": true },
+                    { "type": "tf", "prompt": "Il TDM statistico migliora l’uso del canale.", "correct": true },
+                    { "type": "short", "prompt": "Differenza tra TDM deterministico e statistico?", "answer": "Slot fissi nel deterministico, dinamici nello statistico." },
+                    { "type": "short", "prompt": "Perché nasce il TDM statistico?", "answer": "Per evitare sprechi di banda quando le sorgenti sono inattive." }
+                ]
+                },
+
+                {
+                "title": "3.13 Frequency Division Multiplexing (FDM)",
+                "definition": "L’FDM è una tecnica di multiplazione che divide il canale in bande di frequenza.",
+                "explanation": "Ogni segnale utilizza una banda di frequenza distinta e tutte le trasmissioni avvengono simultaneamente. L’FDM è tipico delle trasmissioni analogiche.",
+                "questions": [
+                    { "type": "mcq", "prompt": "L’FDM divide il canale in:", "options": ["Slot temporali", "Bande di frequenza", "Codici", "Frame"], "correctIndex": 1 },
+                    { "type": "mcq", "prompt": "L’FDM è tipico di:", "options": ["Digitale", "Analogico", "Routing", "Codifica"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "In FDM i segnali trasmettono contemporaneamente.", "correct": true },
+                    { "type": "tf", "prompt": "In FDM i segnali condividono la stessa frequenza.", "correct": false },
+                    { "type": "short", "prompt": "Qual è il principio base dell’FDM?", "answer": "La divisione del canale in frequenze." },
+                    { "type": "short", "prompt": "Perché serve una banda di guardia?", "answer": "Per evitare interferenze tra canali adiacenti." }
+                ]
+                },
+
+                {
+                "title": "3.14 Multi-Carrier Modulation (MCM)",
+                "definition": "La MCM è una tecnica di modulazione che utilizza più portanti per trasmettere l’informazione.",
+                "explanation": "Il flusso di dati viene suddiviso in più sottoflussi, ciascuno modulato su una portante diversa. L’OFDM è una forma di MCM in cui le portanti sono ortogonali, riducendo l’interferenza.",
+                "questions": [
+                    { "type": "mcq", "prompt": "Che cosa caratterizza la MCM?", "options": ["Una sola portante", "Più portanti", "Solo tempo", "Solo frequenza"], "correctIndex": 1 },
+                    { "type": "mcq", "prompt": "OFDM significa:", "options": ["Optical FDM", "Orthogonal FDM", "Optimal Data Modulation", "Ordered Frequency Method"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "Le portanti OFDM sono ortogonali.", "correct": true },
+                    { "type": "tf", "prompt": "La MCM riduce la robustezza del segnale.", "correct": false },
+                    { "type": "short", "prompt": "Perché si usa la MCM?", "answer": "Per migliorare efficienza e robustezza della trasmissione." },
+                    { "type": "short", "prompt": "Qual è il vantaggio dell’OFDM?", "answer": "Ridurre interferenze tra portanti." }
+                ]
+                },
+
+                {
+                "title": "3.15 Code Division Multiplexing (CDM)",
+                "definition": "Il CDM è una tecnica di multiplazione che utilizza codici distinti per separare i segnali.",
+                "explanation": "Tutti i segnali trasmettono contemporaneamente sulla stessa banda, ma vengono distinti tramite codici ortogonali. È alla base delle comunicazioni CDMA.",
+                "questions": [
+                    { "type": "mcq", "prompt": "Nel CDM i segnali si distinguono per:", "options": ["Tempo", "Frequenza", "Codice", "Ampiezza"], "correctIndex": 2 },
+                    { "type": "tf", "prompt": "Nel CDM tutti i segnali usano la stessa banda.", "correct": true },
+                    { "type": "tf", "prompt": "Il CDM non richiede sincronizzazione.", "correct": false },
+                    { "type": "short", "prompt": "Qual è l’idea base del CDM?", "answer": "Separare i segnali tramite codici." },
+                    { "type": "short", "prompt": "Dove è usato il CDM?", "answer": "Nelle comunicazioni mobili (CDMA)." }
+                ]
+                },
+
+                {
+                "title": "3.16 Mezzi trasmissivi",
+                "definition": "I mezzi trasmissivi sono i supporti utilizzati per propagare i segnali.",
+                "explanation": "I mezzi trasmissivi possono essere guidati o non guidati. La qualità della trasmissione dipende da interferenze e tecniche di schermatura, che proteggono il segnale da disturbi esterni.",
+                "questions": [
+                    { "type": "mcq", "prompt": "Cosa sono i mezzi trasmissivi?", "options": ["Protocolli", "Supporti di propagazione", "Codifiche", "Applicazioni"], "correctIndex": 1 },
+                    { "type": "mcq", "prompt": "La schermatura serve a:", "options": ["Amplificare", "Ridurre interferenze", "Codificare", "Modulare"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "Le interferenze degradano il segnale.", "correct": true },
+                    { "type": "tf", "prompt": "La schermatura peggiora la qualità del segnale.", "correct": false },
+                    { "type": "short", "prompt": "Perché la schermatura è importante?", "answer": "Per proteggere il segnale da disturbi esterni." },
+                    { "type": "short", "prompt": "Che effetto hanno le interferenze?", "answer": "Alterano la qualità della trasmissione." }
+                ]
+                },
+
+                {
+                "title": "3.17 Fibre ottiche",
+                "definition": "La fibra ottica è un mezzo trasmissivo che utilizza la luce per trasportare informazioni su lunghe distanze.",
+                "explanation": "La fibra ottica sfrutta il principio della rifrazione e della riflessione totale interna per guidare la luce all’interno del nucleo. Esistono diversi tipi di fibra ottica, distinguibili per struttura e modalità di propagazione della luce. I modi di propagazione determinano il percorso seguito dai raggi luminosi. La trasmissione dipende dalla lunghezza d’onda utilizzata, che influisce sulla finestra operativa e sull’attenuazione del segnale. L’attenuazione rappresenta la perdita di potenza lungo la fibra. Le fibre possono essere monomodali o multimodali. Tecniche come il Wavelength Division Multiplexing (WDM) permettono di trasmettere più segnali su una singola fibra. Il transponder gestisce conversione e amplificazione del segnale. La trasmissione sulla fibra richiede dispositivi di ricezione capaci di convertire il segnale ottico in elettrico.",
+                "questions": [
+                    { "type": "mcq", "prompt": "Che mezzo usa la fibra ottica?", "options": ["Segnali elettrici", "Luce", "Onde radio", "Microonde"], "correctIndex": 1 },
+                    { "type": "mcq", "prompt": "La riflessione totale interna serve a:", "options": ["Bloccare la luce", "Guidare la luce", "Amplificare il segnale", "Ridurre il rumore"], "correctIndex": 1 },
+                    { "type": "mcq", "prompt": "Il WDM consente di:", "options": ["Ridurre l’attenuazione", "Trasmettere più segnali", "Eliminare la rifrazione", "Ridurre la lunghezza d’onda"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "La fibra ottica è immune alle interferenze elettromagnetiche.", "correct": true },
+                    { "type": "tf", "prompt": "La lunghezza d’onda non influisce sulla trasmissione.", "correct": false },
+                    { "type": "short", "prompt": "Cos’è l’attenuazione?", "answer": "La perdita di potenza del segnale lungo la fibra." },
+                    { "type": "short", "prompt": "Differenza tra fibra monomodale e multimodale?", "answer": "La monomodale ha un solo modo di propagazione, la multimodale più modi." }
+                ]
+                },
+
+                {
+                "title": "3.18 Paradosso di Tanenbaum",
+                "definition": "Il paradosso di Tanenbaum evidenzia che una maggiore capacità teorica non implica necessariamente migliori prestazioni reali.",
+                "explanation": "Il paradosso mostra come fattori pratici quali rumore, protocolli, gestione della rete e limiti fisici possano ridurre le prestazioni rispetto a quelle teoricamente attese.",
+                "questions": [
+                    { "type": "mcq", "prompt": "Cosa evidenzia il paradosso di Tanenbaum?", "options": ["Errori di codifica", "Differenza tra teoria e pratica", "Limiti della fibra", "Problemi di routing"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "Prestazioni teoriche e reali coincidono sempre.", "correct": false },
+                    { "type": "short", "prompt": "Perché è importante questo paradosso?", "answer": "Perché mostra i limiti reali delle reti." }
+                ]
+                },
+
+                {
+                "title": "3.19 Mezzi di trasmissione Wireless",
+                "definition": "I mezzi wireless consentono la comunicazione senza l’uso di supporti fisici.",
+                "explanation": "La trasmissione wireless utilizza onde elettromagnetiche che si propagano nello spazio. È soggetta a interferenze, attenuazione e limiti di distanza.",
+                "questions": [
+                    { "type": "mcq", "prompt": "I mezzi wireless usano:", "options": ["Cavi", "Onde elettromagnetiche", "Fibre", "Segnali meccanici"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "Le trasmissioni wireless sono soggette a interferenze.", "correct": true },
+                    { "type": "short", "prompt": "Vantaggio principale del wireless?", "answer": "Assenza di cablaggio." }
+                ]
+                },
+
+                {
+                "title": "3.20 Sistema di antenne",
+                "definition": "Un sistema di antenne permette la trasmissione e la ricezione di onde elettromagnetiche.",
+                "explanation": "Le antenne convertono segnali elettrici in onde elettromagnetiche e viceversa. La loro forma e orientamento influenzano la propagazione.",
+                "questions": [
+                    { "type": "mcq", "prompt": "Funzione principale di un’antenna?", "options": ["Amplificare", "Convertire segnali", "Codificare", "Instradare"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "Le antenne funzionano solo in trasmissione.", "correct": false },
+                    { "type": "short", "prompt": "Cosa influenza il comportamento di un’antenna?", "answer": "Forma, dimensioni e orientamento." }
+                ]
+                },
+
+                {
+                "title": "3.21 Le onde elettromagnetiche",
+                "definition": "Le onde elettromagnetiche sono onde che trasportano energia e informazione nello spazio.",
+                "explanation": "Sono alla base delle comunicazioni wireless e comprendono radioonde, microonde e luce.",
+                "questions": [
+                    { "type": "mcq", "prompt": "Le comunicazioni wireless si basano su:", "options": ["Onde meccaniche", "Onde elettromagnetiche", "Onde acustiche", "Segnali elettrici"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "Le onde elettromagnetiche non necessitano di un mezzo materiale.", "correct": true },
+                    { "type": "short", "prompt": "Cita un esempio di onda elettromagnetica.", "answer": "Radioonde o microonde." }
+                ]
+                },
+
+                {
+                "title": "3.22 Tipologie di trasmissione radio",
+                "definition": "Le trasmissioni radio si distinguono per modalità di propagazione e utilizzo.",
+                "explanation": "Ogni tipologia presenta caratteristiche diverse in termini di copertura, frequenza e affidabilità.",
+                "questions": [
+                    { "type": "mcq", "prompt": "Le trasmissioni radio si differenziano per:", "options": ["Colore", "Propagazione", "Codifica", "Routing"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "Ogni tipo di trasmissione radio ha la stessa copertura.", "correct": false },
+                    { "type": "short", "prompt": "Perché esistono più tipologie radio?", "answer": "Per adattarsi a diversi contesti e distanze." }
+                ]
+                },
+
+
+                {
+                "title": "3.23 Radiodiffusione",
+                "definition": "La radiodiffusione è una trasmissione radio verso un ampio numero di ricevitori.",
+                "explanation": "È utilizzata per radio e televisione, con trasmissione unidirezionale.",
+                "questions": [
+                    { "type": "mcq", "prompt": "La radiodiffusione è:", "options": ["Punto-punto", "Punto-multipunto", "Bidirezionale", "Cablata"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "La radiodiffusione è bidirezionale.", "correct": false },
+                    { "type": "short", "prompt": "Dove è usata la radiodiffusione?", "answer": "Radio e televisione." }
+                ]
+                },
+
+                {
+                "title": "3.24 Trasmissione via radio",
+                "definition": "La trasmissione via radio utilizza onde radio per la comunicazione.",
+                "explanation": "È una delle forme più diffuse di comunicazione wireless e permette collegamenti a varie distanze.",
+                "questions": [
+                    { "type": "mcq", "prompt": "La trasmissione radio utilizza:", "options": ["Onde acustiche", "Onde radio", "Fibre", "Cavi"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "La trasmissione radio è una forma di wireless.", "correct": true },
+                    { "type": "short", "prompt": "Vantaggio della trasmissione radio?", "answer": "Copertura ampia senza cablaggi." }
+                ]
+                },
+
+                {
+                "title": "3.25 Trasmissione radio a microonde",
+                "definition": "La trasmissione a microonde utilizza frequenze elevate per comunicazioni ad alta capacità.",
+                "explanation": "Richiede linea di vista tra le antenne ed è sensibile agli ostacoli.",
+                "questions": [
+                    { "type": "mcq", "prompt": "Le microonde richiedono:", "options": ["Cavi", "Linea di vista", "Fibra", "Codici"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "Le microonde attraversano facilmente ostacoli.", "correct": false },
+                    { "type": "short", "prompt": "Perché usare le microonde?", "answer": "Per trasmissioni ad alta capacità." }
+                ]
+                },
+
+                {
+                "title": "3.26 Trasmissione a infrarossi",
+                "definition": "La trasmissione a infrarossi utilizza onde con lunghezza d’onda maggiore della luce visibile.",
+                "explanation": "È adatta a comunicazioni a corto raggio e non attraversa ostacoli opachi.",
+                "questions": [
+                    { "type": "mcq", "prompt": "Gli infrarossi sono usati per:", "options": ["Lunghe distanze", "Corto raggio", "Fibra", "Satellite"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "Gli infrarossi attraversano muri.", "correct": false },
+                    { "type": "short", "prompt": "Esempio di uso degli infrarossi?", "answer": "Telecomandi." }
+                ]
+                },
+
+                {
+                "title": "3.27 Lightwave Transmission",
+                "definition": "La Lightwave Transmission utilizza onde luminose per trasmettere informazioni.",
+                "explanation": "È alla base delle comunicazioni ottiche, sia in spazio libero sia su fibra.",
+                "questions": [
+                    { "type": "mcq", "prompt": "La Lightwave Transmission usa:", "options": ["Onde radio", "Luce", "Microonde", "Segnali elettrici"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "È una forma di comunicazione ottica.", "correct": true },
+                    { "type": "short", "prompt": "Dove si usa la lightwave?", "answer": "Nelle comunicazioni ottiche." }
+                ]
+                },
+
+                {
+                "title": "3.28 Trasmissione satellitare",
+                "definition": "La trasmissione satellitare utilizza satelliti per comunicazioni a lunga distanza.",
+                "explanation": "Permette copertura globale superando limiti geografici.",
+                "questions": [
+                    { "type": "mcq", "prompt": "Vantaggio principale del satellite?", "options": ["Basso costo", "Copertura globale", "Assenza di ritardo", "Nessun rumore"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "La trasmissione satellitare copre grandi distanze.", "correct": true },
+                    { "type": "short", "prompt": "Limite del satellite?", "answer": "Ritardo di propagazione." }
+                ]
+                },
+
+                {
+                "title": "3.29 Satelliti",
+                "definition": "I satelliti sono dispositivi artificiali posti in orbita per supportare le comunicazioni.",
+                "explanation": "Agiscono come ripetitori spaziali tra stazioni terrestri.",
+                "questions": [
+                    { "type": "mcq", "prompt": "Il satellite agisce come:", "options": ["Router", "Ripetitore", "Server", "Terminale"], "correctIndex": 1 },
+                    { "type": "tf", "prompt": "I satelliti sono posizionati in orbita.", "correct": true },
+                    { "type": "short", "prompt": "Funzione del satellite?", "answer": "Ritrasmettere segnali tra stazioni." }
+                ]
+                }
+
+    ]
+}

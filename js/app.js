@@ -73,11 +73,24 @@ async function init() {
   viewChaptersBtn.onclick = () => selectedSubject && renderChapters(selectedSubject);
   viewStudyBtn.onclick = () => currentChapter && renderStudy(currentChapter);
 
-  searchEl.addEventListener("input", () => currentChapter && renderStudy(currentChapter));
+  // Search: funziona solo se un capitolo è caricato (Studio)
+  searchEl.addEventListener("input", () => {
+    if (!currentChapter) return;
+    renderStudy(currentChapter);
+  });
+
   expandAllBtn.onclick = () => setAllDetails(true);
   collapseAllBtn.onclick = () => setAllDetails(false);
 
   setStatus("Pronto ✅");
+}
+
+// Abilita/disabilita controlli di studio (search + expand/collapse)
+function setStudyControlsEnabled(enabled) {
+  searchEl.disabled = !enabled;
+  expandAllBtn.disabled = !enabled;
+  collapseAllBtn.disabled = !enabled;
+  if (!enabled) searchEl.value = "";
 }
 
 function setNavState({ chaptersEnabled, studyEnabled }) {
@@ -90,8 +103,9 @@ function renderSubjects() {
   selectedChapterRef = null;
   currentChapter = null;
 
+  setStudyControlsEnabled(false);
   setNavState({ chaptersEnabled: false, studyEnabled: false });
-  searchEl.value = "";
+
   panel.innerHTML = `
     <div class="row space-between">
       <h2>Materie</h2>
@@ -122,8 +136,8 @@ function renderChapters(subj) {
   selectedChapterRef = null;
   currentChapter = null;
 
+  setStudyControlsEnabled(false);
   setNavState({ chaptersEnabled: true, studyEnabled: false });
-  searchEl.value = "";
 
   panel.innerHTML = `
     <div class="row space-between">
@@ -158,13 +172,18 @@ async function openChapter(chRef) {
   setStatus(`Apro: ${selectedSubject.name} — ${chRef.title}…`);
 
   currentChapter = await fetchJSON(chRef.json);
+
   setNavState({ chaptersEnabled: true, studyEnabled: true });
+  setStudyControlsEnabled(true); // ✅ IMPORTANTISSIMO: abilita search/expand/collapse
 
   renderStudy(currentChapter);
   setStatus("Capitolo caricato ✅");
 }
 
 function renderStudy(chapter) {
+  // ✅ robusto: se entri qui, i controlli devono essere attivi
+  setStudyControlsEnabled(true);
+
   const q = (searchEl.value || "").toLowerCase().trim();
   const topics = (chapter.topics || []).filter(t => {
     if (!q) return true;
@@ -189,6 +208,7 @@ function renderStudy(chapter) {
   `;
 
   const wrap = document.getElementById("topics");
+
   for (const t of topics) {
     const det = document.createElement("details");
     det.open = false;
@@ -326,8 +346,9 @@ function renderQuestion(qq) {
   return box;
 }
 
+// ✅ Ora espande/comprime SOLO ciò che è nel pannello corrente (studio)
 function setAllDetails(open) {
-  document.querySelectorAll("details").forEach(d => d.open = open);
+  panel.querySelectorAll("details").forEach(d => d.open = open);
 }
 
 async function fetchJSON(url) {

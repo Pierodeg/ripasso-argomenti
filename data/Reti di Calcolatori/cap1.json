@@ -1,36 +1,490 @@
 {
-  "subject": "Reti di Calcolatori",
-  "chapterId": "cap1",
-  "chapterTitle": "Capitolo 1 – La rete",
+  "chapterTitle": "Capitolo 1 – Le reti di calcolatori",
   "topics": [
     {
-      "id": "1.4",
-      "title": "1.4 DTE (Data Terminal Equipment)",
-      "definition": "Il DTE (Data Terminal Equipment) è l’insieme costituito da un sistema di elaborazione e dalle sue risorse, che agisce come utente finale della rete e ha lo scopo di generare, elaborare e utilizzare dati trasmessi attraverso la rete.",
-      "explanation": "Il DTE comprende sistema, terminale e risorse applicative/I-O; può essere PC, supercalcolatore o dispositivo IoT. Comunica tramite un DCE (tipicamente switch/router). La rete interconnette i DTE per scambio dati, condivisione risorse e cooperazione tra processi.",
+      "title": "1.1 Introduzione",
+      "definition": "Una rete di calcolatori è un insieme di dispositivi autonomi interconnessi tra loro allo scopo di scambiare informazioni e condividere risorse.",
+      "explanation": "I dispositivi collegati comunicano tramite mezzi di trasmissione e protocolli comuni, permettendo lo scambio di dati e l’accesso condiviso alle risorse.",
       "questions": [
         {
           "type": "mcq",
-          "prompt": "Qual è il ruolo del DTE in una rete?",
+          "prompt": "Che cosa definisce una rete di calcolatori?",
           "options": [
-            "Nodo intermedio che instrada pacchetti",
-            "Utente finale che genera/usa dati e risorse",
-            "Protocollo di livello trasporto",
-            "Mezzo fisico di trasmissione"
+            "Un insieme di computer isolati",
+            "Un insieme di dispositivi interconnessi",
+            "Un singolo computer connesso a Internet",
+            "Un sistema operativo distribuito"
           ],
-          "correctIndex": 1,
-          "explanation": "Il DTE è il sistema/host utente finale con le sue risorse."
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Qual è uno degli obiettivi principali di una rete?",
+          "options": [
+            "Ridurre la memoria dei dispositivi",
+            "Condividere informazioni e risorse",
+            "Sostituire l’hardware",
+            "Eliminare i protocolli"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "I dispositivi collegati a una rete sono chiamati:",
+          "options": [
+            "Canali",
+            "Nodi",
+            "Processi",
+            "Moduli"
+          ],
+          "correctIndex": 1
         },
         {
           "type": "tf",
-          "prompt": "Il DTE comunica con la rete tramite un DCE.",
-          "correct": true,
-          "explanation": "Il DCE fornisce il collegamento alla rete."
+          "prompt": "Una rete permette lo scambio di informazioni tra dispositivi.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "prompt": "In una rete i dispositivi devono essere nello stesso luogo fisico.",
+          "correct": false
         },
         {
           "type": "short",
-          "prompt": "Spiega in una frase perché serve il DCE.",
-          "answer": "Perché il DCE fornisce l’accesso e la terminazione del collegamento verso la rete."
+          "prompt": "Che cosa si intende per nodo di una rete?",
+          "answer": "Un nodo è un dispositivo collegato alla rete in grado di inviare o ricevere dati."
+        },
+        {
+          "type": "short",
+          "prompt": "Perché le reti sono fondamentali nei sistemi informatici moderni?",
+          "answer": "Perché consentono la comunicazione e la condivisione efficiente di risorse e informazioni."
+        }
+      ]
+    },
+
+    {
+      "title": "1.2 Vantaggi delle reti di calcolatori",
+      "definition": "Le reti di calcolatori consentono la condivisione delle risorse, migliorano la comunicazione e riducono i costi.",
+      "explanation": "Grazie alle reti è possibile condividere hardware, software e dati, aumentando l’efficienza e la produttività.",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Quale tra questi è un vantaggio delle reti?",
+          "options": [
+            "Isolamento dei computer",
+            "Condivisione delle risorse",
+            "Aumento dei costi",
+            "Riduzione dell’accessibilità"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Le reti permettono di:",
+          "options": [
+            "Condividere file e stampanti",
+            "Eliminare la sicurezza",
+            "Ridurre la velocità",
+            "Evitare la manutenzione"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mcq",
+          "prompt": "Quale risorsa può essere condivisa in rete?",
+          "options": [
+            "Stampanti",
+            "File",
+            "Connessione Internet",
+            "Tutte le precedenti"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "type": "tf",
+          "prompt": "Le reti migliorano la comunicazione tra utenti.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "prompt": "Le reti aumentano sempre i costi di gestione.",
+          "correct": false
+        },
+        {
+          "type": "short",
+          "prompt": "Indica due vantaggi principali delle reti.",
+          "answer": "Condivisione delle risorse e miglioramento della comunicazione."
+        },
+        {
+          "type": "short",
+          "prompt": "Perché le reti aumentano l’efficienza dei sistemi?",
+          "answer": "Perché permettono l’uso condiviso delle risorse evitando duplicazioni."
+        }
+      ]
+    },
+
+    {
+      "title": "1.3 Svantaggi delle reti di calcolatori",
+      "definition": "Le reti di calcolatori presentano svantaggi legati alla sicurezza, alla complessità e ai costi.",
+      "explanation": "L’uso delle reti introduce rischi di accesso non autorizzato e richiede personale qualificato per la gestione.",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Quale tra questi è uno svantaggio delle reti?",
+          "options": [
+            "Condivisione dei dati",
+            "Rischi per la sicurezza",
+            "Accesso remoto",
+            "Velocità elevata"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Un problema tipico delle reti è:",
+          "options": [
+            "La complessità di gestione",
+            "La mancanza di comunicazione",
+            "L’isolamento dei nodi",
+            "L’assenza di protocolli"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mcq",
+          "prompt": "Quale aspetto richiede maggiore attenzione nelle reti?",
+          "options": [
+            "Grafica",
+            "Sicurezza",
+            "Velocità della CPU",
+            "Formato dei file"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "tf",
+          "prompt": "Le reti eliminano completamente i problemi di sicurezza.",
+          "correct": false
+        },
+        {
+          "type": "tf",
+          "prompt": "La gestione di una rete richiede competenze specifiche.",
+          "correct": true
+        },
+        {
+          "type": "short",
+          "prompt": "Perché la sicurezza è un problema nelle reti?",
+          "answer": "Perché i dati possono essere accessibili da più utenti e da remoto."
+        },
+        {
+          "type": "short",
+          "prompt": "Qual è uno svantaggio legato alla gestione delle reti?",
+          "answer": "La necessità di manutenzione e personale qualificato."
+        }
+      ]
+    },
+
+    {
+      "title": "1.4 Terminale",
+      "definition": "Il terminale è un dispositivo che consente l’interazione tra l’utente e il sistema di elaborazione.",
+      "explanation": "Il terminale permette l’immissione e la visualizzazione dei dati ma non esegue elaborazioni autonome.",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Qual è la funzione principale di un terminale?",
+          "options": [
+            "Elaborare dati",
+            "Consentire l’interazione con il sistema",
+            "Gestire la rete",
+            "Memorizzare informazioni"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Il terminale:",
+          "options": [
+            "Esegue calcoli complessi",
+            "Comunica con il sistema centrale",
+            "Sostituisce il server",
+            "È sempre un DCE"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Un terminale è:",
+          "options": [
+            "Un dispositivo di input/output",
+            "Un dispositivo di rete",
+            "Un modem",
+            "Un protocollo"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "prompt": "Il terminale elabora autonomamente i dati.",
+          "correct": false
+        },
+        {
+          "type": "tf",
+          "prompt": "Il terminale permette all’utente di interagire con il sistema.",
+          "correct": true
+        },
+        {
+          "type": "short",
+          "prompt": "A cosa serve un terminale?",
+          "answer": "A permettere l’interazione tra l’utente e il sistema di elaborazione."
+        },
+        {
+          "type": "short",
+          "prompt": "Il terminale è un dispositivo di elaborazione?",
+          "answer": "No, è un dispositivo di input/output."
+        }
+      ]
+    },
+
+    {
+      "title": "1.5 DTE (Data Terminal Equipment)",
+      "definition": "Il DTE è un dispositivo che genera o utilizza i dati all’interno di una rete.",
+      "explanation": "I DTE producono o ricevono informazioni e rappresentano i terminali finali della comunicazione.",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Quale dispositivo è un DTE?",
+          "options": [
+            "Modem",
+            "Router",
+            "Computer",
+            "Ripetitore"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "type": "mcq",
+          "prompt": "Il DTE ha il compito di:",
+          "options": [
+            "Trasmettere segnali",
+            "Generare o usare dati",
+            "Amplificare il segnale",
+            "Instradare pacchetti"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Un esempio di DTE è:",
+          "options": [
+            "Stampante di rete",
+            "Computer",
+            "Modem",
+            "Hub"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "tf",
+          "prompt": "Il DTE è responsabile della produzione dei dati.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "prompt": "Il DTE fornisce i mezzi di trasmissione.",
+          "correct": false
+        },
+        {
+          "type": "short",
+          "prompt": "Che cosa significa DTE?",
+          "answer": "Data Terminal Equipment."
+        },
+        {
+          "type": "short",
+          "prompt": "Qual è il ruolo del DTE in una rete?",
+          "answer": "Generare o utilizzare i dati."
+        }
+      ]
+    },
+
+    {
+      "title": "1.6 DCE (Data Communication Equipment)",
+      "definition": "Il DCE è un dispositivo che consente la trasmissione dei dati tra i DTE.",
+      "explanation": "Il DCE fornisce i mezzi fisici e logici necessari alla comunicazione, come modem e apparati di rete.",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Quale dispositivo è un DCE?",
+          "options": [
+            "Computer",
+            "Terminale",
+            "Modem",
+            "Monitor"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "type": "mcq",
+          "prompt": "Il DCE si occupa di:",
+          "options": [
+            "Generare dati",
+            "Trasmettere dati",
+            "Elaborare dati",
+            "Memorizzare dati"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Un router è:",
+          "options": [
+            "Un DTE",
+            "Un DCE",
+            "Un terminale",
+            "Un protocollo"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "tf",
+          "prompt": "Il DCE consente la comunicazione tra dispositivi.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "prompt": "Il DCE produce i dati.",
+          "correct": false
+        },
+        {
+          "type": "short",
+          "prompt": "Che cosa significa DCE?",
+          "answer": "Data Communication Equipment."
+        },
+        {
+          "type": "short",
+          "prompt": "Qual è il ruolo del DCE?",
+          "answer": "Consentire la trasmissione dei dati."
+        }
+      ]
+    },
+
+    {
+      "title": "1.7 Classificazione delle reti",
+      "definition": "Le reti di calcolatori possono essere classificate in base all’estensione geografica.",
+      "explanation": "La classificazione più comune distingue le reti in LAN, MAN e WAN.",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "In base a cosa si classificano le reti?",
+          "options": [
+            "Numero di utenti",
+            "Estensione geografica",
+            "Tipo di hardware",
+            "Sistema operativo"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Quale non è una categoria di rete?",
+          "options": [
+            "LAN",
+            "MAN",
+            "WAN",
+            "PANIC"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "type": "mcq",
+          "prompt": "La WAN copre:",
+          "options": [
+            "Un edificio",
+            "Una città",
+            "Grandi distanze",
+            "Un’aula"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "type": "tf",
+          "prompt": "La classificazione delle reti dipende dall’area coperta.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "prompt": "LAN e WAN sono equivalenti.",
+          "correct": false
+        },
+        {
+          "type": "short",
+          "prompt": "Quali sono le principali categorie di reti?",
+          "answer": "LAN, MAN e WAN."
+        },
+        {
+          "type": "short",
+          "prompt": "Su quale criterio si basa la classificazione delle reti?",
+          "answer": "Sull’estensione geografica."
+        }
+      ]
+    },
+
+    {
+      "title": "1.11.1 LAN (Local Area Network)",
+      "definition": "Una LAN è una rete che copre un’area geografica limitata, come un edificio o un campus.",
+      "explanation": "Le LAN offrono elevate velocità di trasmissione e sono generalmente gestite da una singola organizzazione.",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Quale area copre una LAN?",
+          "options": [
+            "Un continente",
+            "Una nazione",
+            "Un’area limitata",
+            "Il mondo intero"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "type": "mcq",
+          "prompt": "Le LAN sono caratterizzate da:",
+          "options": [
+            "Basse velocità",
+            "Alte velocità",
+            "Assenza di controllo",
+            "Elevata latenza"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Un esempio di LAN è:",
+          "options": [
+            "Internet",
+            "La rete di una scuola",
+            "Una rete satellitare",
+            "Una rete nazionale"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "tf",
+          "prompt": "Una LAN copre generalmente una piccola area.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "prompt": "Le LAN hanno solitamente basse velocità di trasmissione.",
+          "correct": false
+        },
+        {
+          "type": "short",
+          "prompt": "Che cosa significa LAN?",
+          "answer": "Local Area Network."
+        },
+        {
+          "type": "short",
+          "prompt": "Fai un esempio pratico di LAN.",
+          "answer": "La rete interna di un ufficio o di una scuola."
         }
       ]
     }

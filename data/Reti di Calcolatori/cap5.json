@@ -1,0 +1,193 @@
+{
+  "chapterTitle": "Capitolo 5 – Data Link LAN",
+  "topics": [
+    {
+      "title": "5.1 Collegamenti diretti",
+      "definition": "I collegamenti diretti sono connessioni punto-punto tra due nodi che condividono esclusivamente il mezzo trasmissivo.",
+      "explanation": "Nei collegamenti diretti il mezzo non è condiviso con altri nodi. Questo elimina il problema delle collisioni e semplifica il controllo dell’accesso. Esempi tipici sono i collegamenti full-duplex tra due dispositivi. In questo caso il livello MAC è molto semplice perché non deve gestire contese.",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Un collegamento diretto è:",
+          "options": [
+            "Condiviso da più nodi",
+            "Punto-punto",
+            "Broadcast",
+            "Multiaccess"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "tf",
+          "prompt": "Nei collegamenti diretti non ci sono collisioni.",
+          "correct": true
+        },
+        {
+          "type": "short",
+          "prompt": "Perché il MAC è semplice nei collegamenti diretti?",
+          "answer": "Perché il mezzo non è condiviso."
+        }
+      ]
+    },
+    {
+      "title": "5.2 Broadcast multiaccess",
+      "definition": "Il broadcast multiaccess è una modalità di comunicazione in cui più nodi condividono lo stesso mezzo trasmissivo.",
+      "explanation": "In un ambiente broadcast, ogni trasmissione viene ricevuta da tutti i nodi collegati al mezzo. Poiché il mezzo è condiviso, è necessario stabilire regole per evitare che più nodi trasmettano contemporaneamente causando collisioni. Questo scenario è tipico delle reti locali tradizionali.",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Nel broadcast multiaccess:",
+          "options": [
+            "Il mezzo è dedicato",
+            "Tutti ricevono le trasmissioni",
+            "Non servono regole",
+            "Non esistono collisioni"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "tf",
+          "prompt": "Nel broadcast multiaccess possono verificarsi collisioni.",
+          "correct": true
+        },
+        {
+          "type": "short",
+          "prompt": "Perché servono protocolli MAC nel broadcast?",
+          "answer": "Per gestire l’accesso al mezzo condiviso."
+        }
+      ]
+    },
+    {
+      "title": "5.3 Condivisione su bus",
+      "definition": "La condivisione su bus prevede che più nodi siano collegati a un unico canale fisico comune.",
+      "explanation": "Nel bus tutti i nodi ascoltano lo stesso mezzo. Quando un nodo trasmette, il segnale si propaga lungo il bus e raggiunge tutti gli altri nodi. Se due nodi trasmettono contemporaneamente si genera una collisione. Questo modello è stato usato storicamente nelle prime reti Ethernet.",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Nel bus:",
+          "options": [
+            "Ogni nodo ha un canale dedicato",
+            "Tutti condividono lo stesso mezzo",
+            "Non esistono collisioni",
+            "Serve full-duplex"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "tf",
+          "prompt": "La condivisione su bus può causare collisioni.",
+          "correct": true
+        },
+        {
+          "type": "short",
+          "prompt": "Perché il bus è stato abbandonato nelle reti moderne?",
+          "answer": "Per problemi di scalabilità e collisioni."
+        }
+      ]
+    },
+    {
+      "title": "5.4 Protocolli di accesso multiplo",
+      "definition": "I protocolli di accesso multiplo regolano l’uso diA del mezzo condiviso tra più nodi.",
+      "explanation": "I protocolli di accesso multiplo stabiliscono quando un nodo può trasmettere sul mezzo condiviso. Possono essere suddivisi in tre grandi categorie: protocolli a contesa, protocolli a turno e protocolli a prenotazione. Nei protocolli a contesa i nodi competono per il mezzo e gestiscono le collisioni. Nei protocolli a turno ogni nodo trasmette secondo un ordine prestabilito. Nei protocolli a prenotazione il mezzo viene assegnato preventivamente. Ogni approccio presenta vantaggi e svantaggi in termini di efficienza, latenza e complessità.",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "Perché servono i protocolli di accesso multiplo?",
+          "options": [
+            "Per cifrare i dati",
+            "Per gestire il mezzo condiviso",
+            "Per aumentare la banda",
+            "Per eliminare il MAC"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "I protocolli di accesso multiplo si dividono in:",
+          "options": [
+            "Fisici e logici",
+            "Contesa, turno, prenotazione",
+            "Analogici e digitali",
+            "Half e full duplex"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Nei protocolli a turno:",
+          "options": [
+            "Tutti trasmettono insieme",
+            "Un nodo alla volta trasmette",
+            "Non esistono regole",
+            "Il mezzo è dedicato"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "tf",
+          "prompt": "I protocolli a contesa possono causare collisioni.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "prompt": "I protocolli a prenotazione assegnano il mezzo in anticipo.",
+          "correct": true
+        },
+        {
+          "type": "short",
+          "prompt": "Qual è il vantaggio dei protocolli a turno?",
+          "answer": "Assenza di collisioni."
+        },
+        {
+          "type": "short",
+          "prompt": "Svantaggio dei protocolli a contesa?",
+          "answer": "Possibili collisioni e ritrasmissioni."
+        }
+      ]
+    },
+    {
+      "title": "5.5 Protocolli di collisione",
+      "definition": "I protocolli di collisione gestiscono l’accesso al mezzo quando più nodi trasmettono contemporaneamente.",
+      "explanation": "Nei protocolli di collisione i nodi possono trasmettere liberamente, ma devono rilevare e gestire eventuali collisioni. Tecniche come l’ascolto del canale, il backoff casuale e l’uso di generatori distruttori permettono di ridurre la probabilità di collisione ripetuta. Il metodo Pallgeson introduce strategie di attesa progressiva per migliorare la stabilità del sistema.",
+      "questions": [
+        {
+          "type": "mcq",
+          "prompt": "I protocolli di collisione permettono:",
+          "options": [
+            "Trasmissione ordinata",
+            "Trasmissione libera con gestione collisioni",
+            "Prenotazione del mezzo",
+            "Turnazione fissa"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mcq",
+          "prompt": "Il backoff serve a:",
+          "options": [
+            "Aumentare collisioni",
+            "Attendere prima di ritrasmettere",
+            "Bloccare il mezzo",
+            "Eliminare ACK"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "tf",
+          "prompt": "I generatori distruttori riducono la probabilità di collisioni ripetute.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "prompt": "Il metodo Pallgeson ignora le collisioni.",
+          "correct": false
+        },
+        {
+          "type": "short",
+          "prompt": "Perché servono i protocolli di collisione?",
+          "answer": "Per gestire accessi simultanei al mezzo condiviso."
+        }
+      ]
+    }
+  ]
+}
